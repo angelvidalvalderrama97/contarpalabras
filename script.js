@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+
     function closeCookieBanner() {
         cookieBanner.style.display = "none";
     }
@@ -77,6 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
         countersContainer.style.marginRight = '20px';
     }
 });
+
+
+
 
 
 
