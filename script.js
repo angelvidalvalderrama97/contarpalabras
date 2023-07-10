@@ -71,7 +71,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('text-area').addEventListener('input', countWordsAndCharacters);
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    if (navigator.userAgent.indexOf('Edg') != -1) {
+        const countersContainer = document.querySelector('.counters-container');
+        countersContainer.style.marginTop = '20px';
+        countersContainer.style.marginRight = '20px';
+    }
+});
 
 
 
