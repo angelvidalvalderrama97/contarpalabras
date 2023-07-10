@@ -71,14 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (navigator.userAgent.indexOf('Edg') != -1 || navigator.userAgent.indexOf('Opera') != -1 || navigator.userAgent.indexOf('OPR') != -1) {
-        console.log('Estoy en Edge o en Opera');
+    if (navigator.userAgent.indexOf('Edg') != -1) {
         const countersContainer = document.querySelector('.counters-container');
         countersContainer.style.marginTop = '20px';
         countersContainer.style.marginRight = '20px';
     }
 });
-
 
 
 
