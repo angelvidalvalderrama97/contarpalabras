@@ -10,58 +10,74 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<header class="container">
-    <h1 class="text-center">Contador de palabras y caracteres</h1>
+<header>
+    <div class="container">
+        <a href="index.html">
+            <img src="favicon.png" alt="Favicon" class="favicon">
+        </a>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Contador de palabras</a></li>
+                <li><a href="optimizarContenido.html">Optimizar contenido</a></li>
+                <li><a href="palabraClave.html">Palabras clave</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
     <section class="container">
+        <h1 class="text-center">Contador de palabras y caracteres</h1>
         <h2 class="text-center">Cuenta las palabras y los caracteres de tu contenido</h2>
-        <p>¡Optimiza tus escritos y contenido web con nuestra herramienta de <strong>conteo de texto</strong> en línea! Nuestro contador de palabras y caracteres te proporciona estadísticas precisas y en tiempo real sobre tu texto.</p>
-        <p>¿Necesitas saber <strong>cuántas palabras</strong> tiene un párrafo? ¿<strong>Cuántos caracteres</strong> hay en un artículo? ¡No busques más! Simplemente ingresa tu texto en nuestro cuadro de texto y nuestro contador te mostrará instantáneamente el número de palabras, caracteres con espacios, caracteres sin espacios, párrafos, oraciones, vocales y consonantes.</p>
-        <p>Ya sea que estés redactando un ensayo, creando contenido para tu sitio web o simplemente quieras analizar el texto que estás escribiendo, <strong>nuestro contador de palabras y caracteres</strong> te brinda la información que necesitas para mejorar tu escritura y optimizar tu contenido.</p>
-
         <div class="text-container">
             <textarea id="text-area" placeholder="Escribe tu texto aquí..." oninput="countWordsAndCharacters()"></textarea>
             <button class="btn" onclick="clearTextArea()">Limpiar</button>
         </div>
-    </section>
-
-    <section class="counters-container">
-        <div class="counter">
-            <span class="label">Número de palabras:</span>
-            <span id="word-count">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Caracteres (con espacios):</span>
-            <span id="character-count-with-spaces">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Caracteres (sin espacios):</span>
-            <span id="character-count-without-spaces">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Número de párrafos:</span>
-            <span id="paragraph-count">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Número de oraciones:</span>
-            <span id="sentence-count">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Número de vocales:</span>
-            <span id="vowel-count">0</span>
-        </div>
-        <div class="counter">
-            <span class="label">Número de consonantes:</span>
-            <span id="consonant-count">0</span>
-        </div>
+        <section class="counters-container">
+            <div class="counter">
+                <span class="label">Número de palabras:</span>
+                <span id="word-count">0</span>
+            </div>
+            <div class="counter">
+                <span class="label">Caracteres (con espacios):</span>
+                <span id="character-count-with-spaces">0</span>
+            </div>
+            <div class="counter">
+                <span class="label">Caracteres (sin espacios):</span>
+                <span id="character-count-without-spaces">0</span>
+            </div>
+            <div class="counter">
+                <span class="label">Número de párrafos:</span>
+                <span id="paragraph-count">0</span>
+            </div>
+            <div class="counter">
+                <span class="label">Número de oraciones:</span>
+                <span id="sentence-count">0</span>
+            </div>
+            <div class="counter">
+                <span class="label">Palabra más repetida:</span>
+                <span id="most-frequent-word">-</span>
+            </div>
+        </section>
+        <p>¡Optimiza tus escritos y contenido web con nuestra herramienta de <strong>conteo de texto</strong> en línea! Nuestro contador de palabras y caracteres te proporciona estadísticas precisas y en tiempo real sobre tu texto.</p>
+        <p>¿Necesitas saber <strong>cuántas palabras</strong> tiene un párrafo? ¿<strong>Cuántos caracteres</strong> hay en un artículo? ¡No busques más! Simplemente ingresa tu texto en nuestro cuadro de texto y nuestro contador te mostrará instantáneamente el número de palabras, caracteres con espacios, caracteres sin espacios, párrafos, oraciones, vocales y consonantes.</p>
+        <p>Ya sea que estés redactando un ensayo, creando contenido para tu sitio web o simplemente quieras analizar el texto que estás escribiendo, <strong>nuestro contador de palabras y caracteres</strong> te brinda la información que necesitas para mejorar tu escritura y optimizar tu contenido.</p>
     </section>
 </main>
 
-<footer class="container">
-    <p>© 2023 Contador de Palabras y Caracteres. Todos los derechos reservados. <a href="#top">Volver arriba</a></p>
+
+
+<footer>
+    <div class="container">
+        <p>© 2023 Contador de Palabras y Caracteres. Todos los derechos reservados. <br> <a href="PolíticaPrivacidad.html">Política de privacidad</a> | <a href="SobreNosotros.html">Sobre nosotros</a> | <a href="contacto.html">Contacto</a></p>
+    </div>
 </footer>
+
 
 <div id="cookie-banner" class="cookie-banner">
     <p>Utilizamos cookies para garantizar la mejor experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies.</p>
@@ -72,6 +88,17 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

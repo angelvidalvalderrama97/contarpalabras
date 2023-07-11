@@ -13,48 +13,43 @@ document.addEventListener("DOMContentLoaded", function() {
         const characterCountWithoutSpaces = text.replace(/\s/g, '').length;
         const paragraphCount = text.split('\n\n').filter(paragraph => paragraph !== '').length;
         const sentenceCount = text.split(/[.!?]+/).filter(sentence => sentence !== '').length;
-        const vowelCount = countVowels(text);
-        const consonantCount = countConsonants(text);
+
+        // Código para contar la palabra más repetida
+        let wordsArray = text.toLowerCase().match(/\b[a-z]+\b/g);
+        let wordFrequency = {};
+        let maxCount = 0;
+        let mostFrequentWord = '';
+        if (wordsArray) {
+            wordsArray.forEach(function(word) {
+                if (!wordFrequency[word]) {
+                    wordFrequency[word] = 0;
+                }
+                wordFrequency[word] += 1;
+            });
+            for (let word in wordFrequency) {
+                if (wordFrequency[word] > maxCount) {
+                    maxCount = wordFrequency[word];
+                    mostFrequentWord = word;
+                }
+            }
+        }
 
         document.getElementById('word-count').textContent = wordCount;
         document.getElementById('character-count-with-spaces').textContent = characterCountWithSpaces;
         document.getElementById('character-count-without-spaces').textContent = characterCountWithoutSpaces;
         document.getElementById('paragraph-count').textContent = paragraphCount;
         document.getElementById('sentence-count').textContent = sentenceCount;
-        document.getElementById('vowel-count').textContent = vowelCount;
-        document.getElementById('consonant-count').textContent = consonantCount;
+
+        // Agregar el resultado de la palabra más repetida al DOM
+        document.getElementById('most-frequent-word').textContent = mostFrequentWord;
     }
+
 
     function clearTextArea() {
         document.getElementById('text-area').value = '';
         countWordsAndCharacters();
     }
 
-    function countVowels(text) {
-        const vowels = 'aeiouAEIOU';
-        let count = 0;
-
-        for (let i = 0; i < text.length; i++) {
-            if (vowels.includes(text[i])) {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-    function countConsonants(text) {
-        const consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
-        let count = 0;
-
-        for (let i = 0; i < text.length; i++) {
-            if (consonants.includes(text[i])) {
-                count++;
-            }
-        }
-
-        return count;
-    }
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -77,7 +72,76 @@ document.addEventListener('DOMContentLoaded', function() {
         countersContainer.style.marginTop = '20px';
         countersContainer.style.marginRight = '20px';
     }
+    if (navigator.userAgent.indexOf('Firefox') != -1){
+            const countersContainer = document.querySelector('.counters-container');
+            countersContainer.style.marginTop = '20px';
+            countersContainer.style.marginRight = '50px';
+    }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var menuIcon = document.getElementById('menu-icon');
+    var menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
