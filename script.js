@@ -14,25 +14,30 @@ document.addEventListener("DOMContentLoaded", function() {
         const paragraphCount = text.split('\n\n').filter(paragraph => paragraph !== '').length;
         const sentenceCount = text.split(/[.!?]+/).filter(sentence => sentence !== '').length;
 
-        // Código para contar la palabra más repetida
         let wordsArray = text.toLowerCase().match(/\b[a-z]+\b/g);
         let wordFrequency = {};
-        let maxCount = 0;
         let mostFrequentWord = '';
+
         if (wordsArray) {
-            wordsArray.forEach(function(word) {
-                if (!wordFrequency[word]) {
-                    wordFrequency[word] = 0;
-                }
-                wordFrequency[word] += 1;
-            });
-            for (let word in wordFrequency) {
-                if (wordFrequency[word] > maxCount) {
-                    maxCount = wordFrequency[word];
-                    mostFrequentWord = word;
-                }
+          wordsArray.forEach(function(word) {
+            if (!wordFrequency[word]) {
+              wordFrequency[word] = 0;
             }
+            wordFrequency[word] += 1;
+          });
+
+          for (let word in wordFrequency) {
+            if (wordFrequency[word] >= 2) { // Mostrar solo cuando hay dos palabras repetidas o más
+              if (mostFrequentWord === '') {
+                mostFrequentWord = word;
+              } else if (wordFrequency[word] > wordFrequency[mostFrequentWord]) {
+                mostFrequentWord = word;
+              }
+            }
+          }
         }
+
+
 
         document.getElementById('word-count').textContent = wordCount;
         document.getElementById('character-count-with-spaces').textContent = characterCountWithSpaces;
