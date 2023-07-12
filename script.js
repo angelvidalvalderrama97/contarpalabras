@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
         document.getElementById('word-count').textContent = wordCount;
         document.getElementById('character-count-with-spaces').textContent = characterCountWithSpaces;
         document.getElementById('character-count-without-spaces').textContent = characterCountWithoutSpaces;
