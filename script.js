@@ -50,11 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    function clearTextArea() {
-        document.getElementById('text-area').value = '';
-        countWordsAndCharacters();
-    }
-
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -92,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('active');
     });
 });
+
+function clearTextArea() {
+        document.getElementById('text-area').value = '';
+        countWordsAndCharacters();
+    }
 
 
 
